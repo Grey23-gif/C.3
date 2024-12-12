@@ -10,10 +10,7 @@ int main()
     char so[44];
     sprintf(so, "%d", number);
     
-    for(int i=0;i<strlen(so);i++)
-    {
-        sum+=so[i] - '0';
-    }
+    sum = (number / 1000) + ((number / 100) % 10) + ((number / 10) % 10) + (number % 10);
     printf("Tong cua cac so la: %d",sum);
     return 0;
 }
